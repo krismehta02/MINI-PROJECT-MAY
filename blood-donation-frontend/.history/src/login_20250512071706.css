@@ -1,0 +1,66 @@
+.login-page {
+  background-size: 110%; /* Slight zoom for visual effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-form-container {
+  background-color: rgba(255, 255, 255, 0.15); /* More transparent */
+  backdrop-filter: blur(6px); /* Applies a blur effect behind */
+  padding: 30px;
+  border-radius: 10px; /* Fix: use 'px', not '10x' */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  color: #000;
+}
+
+/* Form Controls */
+.login-form-container .form-control {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8); /* Visible but clean */
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.login-form-container .form-control::placeholder {
+  color: #555;
+}
+
+.login-form-container .form-control:focus {
+  border-color: #f1a5a5;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: none;
+}
+.login-form-container label.form-label {
+  color: #222;      
+  font-weight: 600;  
+}
+
+
+
+.login-btn {
+  width: 45%; 
+  background: rgb(240, 178, 178);
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+   display: block;
+  margin: 20px auto 0; 
+}
+
+.container-mt5{
+    background-image: url('/Videos/login_bg.jpg');
+}
