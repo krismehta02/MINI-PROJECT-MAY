@@ -90,7 +90,7 @@ app.post('/login', (req, res) => {
       };
 
       const token = jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: "1h" });
-      console.log('Generated Token on Server:', token);
+
       // Send token to frontend
       return res.status(200).json({
         message: 'Login successful!',
@@ -165,25 +165,7 @@ app.delete('/deleteDonorProfile', (req, res) => {
     });
   });
 });
-app.post('/submitFeedback', (req, res) => {
-  const { rating, comments } = req.body;
 
-  if (!rating || !comments) {
-    return res.status(400).json({ message: 'Rating and comments are required!' });
-  }
-
-  // Insert feedback into the feedback table
-  const query = `INSERT INTO feedback (rating, comments) VALUES (?, ?)`;
-
-  db.query(query, [rating, comments], (err, result) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ message: 'Database error', error: err });
-    }
-
-    return res.status(201).json({ message: 'Feedback submitted successfully!' });
-  });
-});
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
